@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Palette</title>
+</head>
+<body id="body">
+    <header>
+        <div class="header1"></div>
+        <h1>CodeJam-Palette</h1>
+
+    </header>
+    <main>
+    <section class="tool">
+    <section class="palette">
+        <div class="paint-bucket">
+            <button type="button" class="paint-btn"></button>
+            <div class="text-btn">Fill bucket (b)</div>
+        </div>
+
+        <div class="color-picker">
+                <button type="button" class="pick-btn"></button>
+                <div class="text-btn">Choose color (c)</div>
+        </div>
+        <div class="pen clicked">
+                <button type="button" class="pen-btn"></button>
+                <div class="text-btn">Pencil (p)</div>
+        </div>
+        <div class="transform">
+                <button type="button" class="transform-btn"></button>
+                <div class="text-btn">Transform</div>
+        </div>
+    </section>
+    <section class="colors">
+        <div class="current-color">
+                <input type="color" class="cur-col-btn" value="#c4c4c4"></input>
+                <div class="col-text-btn">Current color</div>
+        </div>
+        <div class="prev-color">
+                <div class="prev-col-btn"></div>
+                <div class="col-text-btn">Prev color</div>
+
+        </div>
+        <div class="red">
+                <button class="red-btn"></button>
+                <div class="col-text-btn">red</div>
+        </div>
+        <div class="blue">
+                <button class="blue-btn"></button>
+                <div class="col-text-btn">blue</div>
+        </div>
+    </section>
+     <section class="canvas-size">
+      <button type="button" class="clear">Clear</button>
+      <button type="button" class="matrix128">Canvas size (128)</button>
+      <button type="button" class="matrix256">Canvas size (256)</button>
+      <button type="button" class="matrix512 selected">Canvas size (512)</button>
+    </section>
+  </section>
+   <section class="canvas">
+        <div class="search-wrapper">
+          <button class="wb-btn">W & B</button>
+          <input type="text" name="search-input" id="search-input" class="search-input">
+          <button class="random-btn">Random upload</button>
+        </div>
+        <canvas class="myCanvas" id="myCanvas" width="512" height="512"></canvas>
+
+ </section>
+</main>
+
+   <script src="./dist/app.bundle.js"></script>
+
+</body>
+</html>
