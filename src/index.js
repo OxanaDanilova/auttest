@@ -479,7 +479,7 @@ const main = () => {
   let myData;
 
 
-  getLogin = (token) => {
+  const getLogin = (token) => {
     fetch('https://api.github.com/user',
       {
       /*     method: 'GET',
