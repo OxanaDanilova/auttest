@@ -515,9 +515,9 @@ const main = () => {
   // ///////
   fetch('https://api.github.com/user',
     {
-      method: 'GET',
+      /*     method: 'GET',
       withCredentials: true,
-      credentials: 'include',
+      credentials: 'include', */
       headers: {
         Authorization: `token ${myData}`,
       },
