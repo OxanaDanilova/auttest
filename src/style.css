@@ -155,16 +155,6 @@ main {
     cursor: pointer;
 }
 
-/* .color-picker::after{
-    content: "";
-    position: absolute;
-    top: 214px;
-    left: 257px;
-    border: 1px solid #e0e0e0;
-    width: 227px;
-
-} */
-
 .pen {
     display: flex;
     margin-bottom: 22px;
