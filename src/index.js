@@ -486,7 +486,7 @@ const main = () => {
     authenticator.authenticate({ provider: 'github', scope: 'user' }, (err, data) => {
       // eslint-disable-next-line no-unused-expressions
       err ? outputText.innerText = `Error Authenticating with GitHub: ${err}`
-        : /* outputText.innerText */ myData = `Authenticated with GitHub. Access Token: ${data.token}`;
+        : /* outputText.innerText */ myData = data.token;
       console.log(data);
       console.log(myData);
     });
