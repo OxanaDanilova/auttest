@@ -1,3 +1,5 @@
+/* eslint-disable new-cap */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import fillUnit from './fillUnit';
@@ -473,22 +475,60 @@ const main = () => {
   };
   wbBtn.addEventListener('click', grayscale);
 
-
   //    ////////////////////////
+  let myData;
 
-  const anchorTag = document.getElementById('login')
-  const outputText = document.getElementById('output')
+  const anchorTag = document.getElementById('login');
+  const outputText = document.getElementById('output');
   anchorTag.addEventListener('click', (e) => {
-    e.preventDefault()
-    const authenticator = new netlify.default ({})
-    authenticator.authenticate({provider:"github", scope: "user"}, (err, data) => {
-      err ? outputText.innerText = "Error Authenticating with GitHub: " + err :
-      outputText.innerText = "Authenticated with GitHub. Access Token: " + data.token
+    e.preventDefault();
+    const authenticator = new netlify.default({});
+    authenticator.authenticate({ provider: 'github', scope: 'user' }, (err, data) => {
+      // eslint-disable-next-line no-unused-expressions
+      err ? outputText.innerText = `Error Authenticating with GitHub: ${err}`
+        : /* outputText.innerText */ myData = `Authenticated with GitHub. Access Token: ${data.token}`;
+      console.log(data);
+      console.log(myData);
+    });
+  });
+
+  // /////////////////////////////////////////
+  /*   fetch(url, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    },
+    credentials: "same-origin"
+  }).then(function(response) {
+    response.status     //=> number 100–599
+    response.statusText //=> String
+    response.headers    //=> Headers
+    response.url        //=> String
+
+    return response.text()
+  }, function(error) {
+    error.message //=> String
+  }) */
+
+
+  // ///////
+  fetch('https://api.github.com/user',
+    {
+      method: 'GET',
+      withCredentials: true,
+      credentials: 'include',
+      headers: {
+        Authorization: `token ${myData}`,
+      },
     })
-  })
+    .then(res => res.json())
+    .then((data) => {
+      console.log('Data from github');
+      console.log(data);
+    });
 
   //  /////////////////////////////////
-
 };
 
 main();
