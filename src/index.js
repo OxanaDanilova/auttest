@@ -478,6 +478,24 @@ const main = () => {
   //    ////////////////////////
   let myData;
 
+
+  getLogin = (token) => {
+    fetch('https://api.github.com/user',
+      {
+      /*     method: 'GET',
+      withCredentials: true,
+      credentials: 'include', */
+        headers: {
+          Authorization: `token ${token}`,
+        },
+      })
+      .then(res => res.json())
+      .then((data) => {
+        console.log('Data from github');
+        console.log(data);
+      });
+  };
+
   const anchorTag = document.getElementById('login');
   const outputText = document.getElementById('output');
   anchorTag.addEventListener('click', (e) => {
@@ -489,6 +507,7 @@ const main = () => {
         : /* outputText.innerText */ myData = data.token;
       console.log(data);
       console.log(myData);
+      getLogin(myData);
     });
   });
 
@@ -513,20 +532,7 @@ const main = () => {
 
 
   // ///////
-  fetch('https://api.github.com/user',
-    {
-      /*     method: 'GET',
-      withCredentials: true,
-      credentials: 'include', */
-      headers: {
-        Authorization: `token ${myData}`,
-      },
-    })
-    .then(res => res.json())
-    .then((data) => {
-      console.log('Data from github');
-      console.log(data);
-    });
+
 
   //  /////////////////////////////////
 };
