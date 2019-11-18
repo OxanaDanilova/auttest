@@ -14,7 +14,12 @@ body {
 header {
     height: 50px;
     display: flex;
+    justify-content: space-between;
     box-shadow: 2px 10px 9px #bbbbbb;
+}
+
+.header-wrapper {
+  display: flex;
 }
 
 .header1 {
@@ -27,7 +32,46 @@ header {
 header h1 {
     font-size: 21px;
     font-family: Arial;
-    margin: 11px 1155px 11px 13px;
+    margin-top: 11px;
+}
+
+.login-wrapper {
+  display: flex;
+  margin-top: 5px;
+  margin-right: 11px;
+}
+
+.user-data {
+  display: none;
+}
+
+.login {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #162d7f;
+}
+
+.user-login {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  }
+
+.logout {
+  width: 65px;
+  height: 40px;
+  cursor: pointer;
+  background-color: thistle;
+  color: #21219c;
+  font-weight: 600;
 }
 
 main {
@@ -37,12 +81,13 @@ main {
 
 .palette {
     width: 213px;
-    height: 231px;
+    height: 170px;
     margin-left: 26px;
     margin-top: 50px;
     border: 1px solid #e0e0e0;
     padding: 7px;
     box-shadow: 2px 10px 9px #bbbbbb;
+
 }
 
 .canvas-size, .upload {
@@ -94,7 +139,7 @@ main {
 
 .color-picker {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
 
 }
 
@@ -110,7 +155,7 @@ main {
     cursor: pointer;
 }
 
-.color-picker::after{
+/* .color-picker::after{
     content: "";
     position: absolute;
     top: 214px;
@@ -118,7 +163,7 @@ main {
     border: 1px solid #e0e0e0;
     width: 227px;
 
-}
+} */
 
 .pen {
     display: flex;
@@ -220,10 +265,10 @@ input[type="color"]::-webkit-color-swatch {
     margin-right: 18px;
 }
 
-.prev-color::after{
+ .prev-color::after{
     content: "";
     position: absolute;
-    top: 512px;
+    top: 450px;
     left: 259px;
     border: 1px solid #e0e0e0;
     width: 227px;
@@ -279,21 +324,33 @@ input[type="color"]::-webkit-color-swatch {
 .search-wrapper {
   margin-left: 180px;
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-input {
   width: 350px;
   height: 25px;
+  padding-left: 10px;
 }
 
 .random-btn {
   width: 90px;
-  height: 29px;
+  height: 40px;
+  cursor: pointer;
+  background-color: thistle;
+  color: #21219c;
+  font-weight: 600;
 }
 
 .wb-btn {
-  width: 50px;
-  height: 29px;
+  width: 55px;
+  height: 40px;
+  cursor: pointer;
+  background-color: thistle;
+  color: #21219c;
+  font-weight: 600;
 }
 
 .matrix-size {
