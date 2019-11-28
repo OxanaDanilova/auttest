@@ -116,15 +116,10 @@ main {
 }
 
 .paint-btn {
-    height: 30px;
-    width: 30px;
-    border: none;
     background-image: url(./images/paint-btn.png);
-    background-repeat: no-repeat;
     background-color: transparent;
-    vertical-align: middle;
     margin-right: 20px;
-    cursor: pointer;
+
 }
 
 .text-btn {
@@ -143,16 +138,21 @@ main {
 
 }
 
-.pick-btn {
-    height: 30px;
+.btn {
+  height: 30px;
     width: 30px;
     border: none;
-    background-image: url(./images/choose-color-btn.png);
     background-repeat: no-repeat;
-    background-color:  #c4c4c4;
     vertical-align: middle;
-    margin-right: 20px;
     cursor: pointer;
+
+}
+
+.pick-btn {
+     background-image: url(./images/choose-color-btn.png);
+     background-color:  #c4c4c4;
+     margin-right: 20px;
+
 }
 
 .pen {
@@ -162,33 +162,12 @@ main {
 }
 
 .pen-btn {
-    height: 30px;
-    width: 30px;
-    border: none;
-    background-image: url(./images/pen-btn.PNG);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    vertical-align: middle;
-    margin-right: 18px;
-    margin-left: 3px
+     background-image: url(./images/pen-btn.PNG);
+     background-color: transparent;
+     margin-right: 18px;
+     margin-left: 3px
 }
 
-.transform-btn {
-    height: 30px;
-    width: 30px;
-    border: none;
-    background-image: url(./images/transform-btn.png);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    vertical-align: middle;
-    margin-right: 20px;
-    margin-left: 5px;
-}
-
-.transform div {
-    padding-top: 0px;
-    padding-left: 11px;
-}
 
 .pick-btn, .pen-btn, .paint-btn, .red-btn, .blue-btn:hover {
   cursor: pointer;
@@ -197,8 +176,6 @@ main {
 .pick-btn, .pen-btn, .paint-btn, .transform-btn, .red-btn, .blue-btn {
  outline: none;
 }
-
-
 
 .colors {
     width: 195px;
@@ -220,12 +197,15 @@ input[type="color"]::-webkit-color-swatch {
   opacity: 0;
 }
 
-.cur-col-btn {
-  -webkit-appearance: none;
+.col-btn {
   width: 20px;
   height: 20px;
   border-radius: 10px;
   border: 1px solid #000000;
+}
+
+.cur-col-btn {
+  -webkit-appearance: none;
   background-color:  #c4c4c4;
   margin-right: 18px;
   outline: none;
@@ -247,10 +227,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .prev-col-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: 1px solid #000000;
     background-color: #41f795;
     margin-right: 18px;
 }
@@ -270,10 +246,6 @@ input[type="color"]::-webkit-color-swatch {
 }
 
 .red-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: 1px solid #000000;
     background-color: red;
     margin-right: 18px;
     margin-top: -4px;
@@ -281,10 +253,6 @@ input[type="color"]::-webkit-color-swatch {
 
 
 .blue-btn {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: 1px solid #000000;
     background-color: #41b6f7;
     margin-right: 18px;
 }
